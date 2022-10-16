@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX05</title>
+</head>
+<body>
+    <script>
+        let nPares = 0, nImpares = 0;
+
+        let num = parseInt(prompt("Digite um número"));
+
+        for (let i = 0; i <= num; i++){
+            if (i % 2 == 0){
+                nPares += 1;
+            }
+            else {
+                nImpares += 1;
+            }
+        }
+
+        alert(`Existem ${nPares} números pares e ${nImpares} números ímpares de 0 a ${num}`);
+    </script>
+</body>
+</html>

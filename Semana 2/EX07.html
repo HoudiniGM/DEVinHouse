@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX07</title>
+</head>
+<body>
+    <script>
+        const data = new Date();
+        let dia = data.getDate();
+        let mes = data.getMonth() + 1;
+        let estacao;
+
+        switch (mes) {
+            case 1:
+            case 2:
+                alert("Verão");
+                break
+
+            case 3:
+                alert((dia <= 21) ? 'Verão' : 'Outono');
+                break
+            
+            case 4:
+            case 5:
+                alert("Outono");
+                break
+
+            case 6:
+                alert((dia <= 21) ? 'Outono' : 'Inverno');
+                break
+
+            case 7:
+            case 8:
+                alert("Inverno");
+                break
+
+            case 9:
+                alert((dia <= 21) ? 'Inverno' : 'Primavera');
+                break
+
+            case 10:
+            case 11:
+                alert("Primavera");
+                break
+
+            case 12:
+                alert((dia <= 21) ? 'Primavera' : 'Verão');
+                break
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX06</title>
+</head>
+<body>
+    <script>
+        let operacao = prompt("Qual tipo de operação você deseja fazer? (+ - * /)");
+        let num1 = parseFloat(prompt("Digite o primeiro número"));
+        let num2 = parseFloat(prompt("Digite o segundo número"));
+
+        if (operacao == '+'){
+            alert(`O resultado do seu cálculo é: ${num1 + num2}`);
+        }
+        else if (operacao == '-'){
+            alert(`O resultado do seu cálculo é: ${num1 - num2}`);
+        }
+        else if (operacao == '*'){
+            alert(`O resultado do seu cálculo é: ${num1 * num2}`);
+        }
+        else if (operacao == '/'){
+            alert(`O resultado do seu cálculo é: ${num1 / num2}`);
+        }
+
+        
+
+    </script>
+</body>
+</html>

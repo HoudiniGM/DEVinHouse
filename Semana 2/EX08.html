@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX08</title>
+</head>
+<body>
+    <script>
+        let listaPrimos = [];
+        let nPrimos = 0;
+        let divisores;
+
+        for (let i = 1; i <= 1000; i++){
+            divisores = 0;
+            for (let k = 1; k <= i; k++){
+                if (i % k == 0){
+                    divisores++;
+                }
+            }
+
+            if (divisores == 2){
+                nPrimos++;
+                listaPrimos.push(i);
+            }
+
+        }
+
+        alert(`Esses são os números primos: ${listaPrimos}\nTotal de ${nPrimos} números primos de 0 a 1000`);
+
+        
+    </script>
+</body>
+</html>

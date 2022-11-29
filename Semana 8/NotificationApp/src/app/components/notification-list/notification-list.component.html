@@ -1,0 +1,25 @@
+<section class="row">
+    <ul class="container d-flex flex-wrap px-4 justify-content-center">
+      <li
+        *ngFor="let item of notifications"
+        class="card text-center col-8 col-lg-5 m-1" 
+        [ngClass]="item.read ? 'read' : ''"
+        >
+        <div class="card-header">
+          <h2>{{ item.title }}</h2>
+        </div>
+  
+        <div class="card-body">
+          <h5 class="card-title">{{ item.text }}</h5>
+        </div>
+        <button class="btn btn-secondary" (click)="readNotification(item)">
+          Marcar como lida
+        </button>
+  
+        <div class="card-footer text-muted">
+          {{ item.createdAt.toLocaleDateString("pt-BR") }} -
+          {{ item.createdAt.toLocaleTimeString() }}
+        </div>
+      </li>
+    </ul>
+  </section>

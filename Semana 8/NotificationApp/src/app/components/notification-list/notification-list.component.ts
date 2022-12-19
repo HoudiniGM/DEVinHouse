@@ -1,16 +1,22 @@
 import { Component } from '@angular/core';
-import { NOTIFICATIONS } from 'src/app/constants/notifications';
-import { Notification } from 'src/app/models/notification';
+import { items } from 'src/app/variaveis/notifications'
 
 @Component({
-  selector: 'ntap-notification-list',
+  selector: 'app-notification-list',
   templateUrl: './notification-list.component.html',
   styleUrls: ['./notification-list.component.scss']
 })
 export class NotificationListComponent {
-  notifications: Notification[] = NOTIFICATIONS;
+  data = new Date();
+  lido = false;
+  items: Array<any> = items;
 
-  readNotification(item: Notification): void {
-    item.read = !item.read;
+  constructor(){}
+
+  marcarLido(item: HTMLElement){ //Esse parâmetro indica onde o button que cliquei.
+    let index = this.items.indexOf(item);   // index = índice desse button em específico no array items.
+    this.items[index]['lido'] = !this.items[index]['lido'];  // toggle da propriedade booleana 'lido'.
   }
+
+
 }

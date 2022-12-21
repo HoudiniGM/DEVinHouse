@@ -6,6 +6,9 @@ import { ModalComponent } from './components/modal/modal.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CardComponent } from './components/card/card.component';
+import { Formulario2Component } from './components/formulario2/formulario2.component';
+import { BuscaComponent } from './components/busca/busca.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,10 +16,13 @@ import { CardComponent } from './components/card/card.component';
     ModalComponent,
     FormularioComponent,
     NavbarComponent,
-    CardComponent
+    CardComponent,
+    Formulario2Component,
+    BuscaComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,11 @@
+<form>
+    <div>
+        <label for="busca" class="form-label">pesquisar</label>
+        <input 
+        [(ngModel)]="buscar"
+        name="buscar"
+        id="busca"
+        class="form-input"
+        (input)="pesquisa.emit(buscar)">
+    </div>
+</form>

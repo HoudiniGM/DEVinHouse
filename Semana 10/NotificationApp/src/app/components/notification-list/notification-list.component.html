@@ -1,0 +1,17 @@
+<app-filtro (filter)="changeToFilteredRoute($event)"></app-filtro>
+
+<ul class="list-group" id="notifications">
+    <li class="list-group-item" *ngFor="let item of items; let i = index">
+        <div [ngClass]="{'opacity-50' : (item.lido == true)}">
+            <h3>{{i}} - {{item.titulo}}</h3>
+            <h6>{{item.subtitulo}}</h6>
+            <p>{{data | date: 'HH:mm - dd/MM/YYYY'}}</p>
+        </div>
+        <button [ngClass]="{'disabled' : (item.lido == true)}" class="btn btn-primary" (click)="marcarLido(item)">Marcar como lido</button>
+    </li>
+</ul>
+
+
+
+
+

@@ -1,0 +1,11 @@
+<ul class="d-flex gap-3">
+    <li><a
+	  *ngFor="let filter of filterBtnText"
+	  class="list-group-item btn btn-primary"
+	  [ngClass]="activeBtn === filter ? 'active' : ''"
+	  (click)="onFilterClick(filter)"
+	>
+	  {{ filter }}
+      </a>
+	</li>
+</ul>

@@ -1,0 +1,20 @@
+<div class="d-flex flex-column w-25 m-auto">
+    <label>Digite uma palavra com entre 5 a 10 caracteres</label>
+    <input
+        type="text"
+        name="input"
+        id="input"
+        [(ngModel)]="palavra"
+    >
+
+    <p *ngIf='validar(); else rejected' class="accepted">
+        A palavra cumpre os requisitos
+    </p>
+
+    <ng-template #rejected>
+        <p class="rejected" *ngIf='palavra.length > 0'>
+            A palavra não cumpre os requisitos!
+        </p>
+    </ng-template>
+
+</div>

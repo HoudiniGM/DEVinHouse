@@ -1,0 +1,15 @@
+<div class="class">
+    <nav class="navbar nav-expand-lg bg-light justify-content-center gap-5">
+        <a
+            *ngFor="let item of items"
+            (click)="pageTarget(item)"
+            >{{item}}
+        </a>
+    </nav>
+    
+    <div [ngSwitch]="page">
+        <h2 *ngSwitchDefault>Estou na página de Home</h2>
+        <h2 *ngSwitchCase="items[1]">Estou na página de Preços</h2>
+        <h2 *ngSwitchCase="items[2]">Estou na página de Informações</h2>
+    </div>
+</div>

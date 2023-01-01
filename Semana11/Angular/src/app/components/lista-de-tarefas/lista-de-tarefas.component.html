@@ -1,0 +1,21 @@
+<div>
+    <h2>Lista de tarefas</h2>
+    
+    <div class="w-50">
+        <label for="inputTarefa" class="form-label">Digite uma tarefa</label>
+        <input 
+            type="text" 
+            id="inputTarefa" 
+            class="form-input"
+            [(ngModel)]="newListagem"
+        >
+        <button class="btn btn-primary" (click)="cadastrarTarefa()">Cadastrar</button>
+        <p *ngIf="eValido" class="text-danger bg-danger bg-opacity-25">Nenhuma tarefa adicionada. Favor digitar a tarefa</p>
+    
+        <ul class="card w-50" *ngFor="let item of listagem">
+            <li class="card-body">
+                {{item}}
+            </li>
+        </ul>
+    </div>
+</div>
